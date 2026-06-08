@@ -39,7 +39,7 @@ export default function LoginForm() {
         return !newErrors.username && !newErrors.password
     } 
 
-    const submitForm = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         if (!validate()) return
         
@@ -50,7 +50,25 @@ export default function LoginForm() {
         <>
             <div className="login-container">
                 <div className="login-card">
-                    <h1 className="login-card__title">Login</h1>
+                    <h1 className="login-card__title">Log in</h1>
+                    <p className="login-card__sub">Sign in to continue</p>
+                    <form onSubmit={handleSubmit} noValidate>
+                        <div className="field">
+                            <label htmlFor="username">Username</label>
+                            <input
+                                id="username"
+                                type="text"
+                                value={formData.username}
+                                onChange={e => updateField("username", e.target.value)}
+                                placeholder="Enter your username"
+                            />
+                            {errors.username && <p className="field__error">{errors.username}</p>}
+                        </div>
+
+
+
+                    </form>
+
 
                 </div>
             </div>
