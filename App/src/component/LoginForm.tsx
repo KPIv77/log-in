@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Eye, EyeOff } from "lucide-react"
 import "./LoginForm.css"
 
 // Set type
@@ -76,7 +77,7 @@ export default function LoginForm() {
                                     placeholder="••••••••"
                                 />
                                 <button type="button" onClick={() => setShowPass(v => !v)}>
-                                    {showPass ? "🙈" : "👁"}
+                                    {showPass ? <Eye size={16} /> : <EyeOff size={16} />}
                                 </button>
                             </div>
                             {errors.password && <p className="field__error">{errors.password}</p>}
