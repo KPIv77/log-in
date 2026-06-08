@@ -21,7 +21,7 @@ export default function LoginForm() {
 
     const [errors, setErrors] = useState({ username: "", password: "" });
 
-    const updateForm = <K extends keyof FormData> (
+    const updateField = <K extends keyof FormData> (
         key: K,
         value: FormData[K]
     ) => {
@@ -63,6 +63,23 @@ export default function LoginForm() {
                                 placeholder="Enter your username"
                             />
                             {errors.username && <p className="field__error">{errors.username}</p>}
+                        </div>
+                        
+                        <div className="field">
+                            <label htmlFor="password">Password</label>
+                            <div className="field__wrap">
+                                <input
+                                    id="password"
+                                    type={showPass ? "text" : "password"}
+                                    value={formData.password}
+                                    onChange={e => updateField("password", e.target.value)}
+                                    placeholder="••••••••"
+                                />
+                                <button type="button" onClick={() => setShowPass(v => !v)}>
+                                    {showPass ? "🙈" : "👁"}
+                                </button>
+                            </div>
+                            {errors.password && <p className="field__error">{errors.password}</p>}
                         </div>
 
 
