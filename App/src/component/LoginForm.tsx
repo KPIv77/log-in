@@ -83,6 +83,19 @@ export default function LoginForm() {
                             {errors.password && <p className="field__error">{errors.password}</p>}
                         </div>
 
+                        <div className="row-between">
+                            <label className="check-label">
+                            <input
+                                type="checkbox"
+                                checked={formData.rememberMe}
+                                onChange={e => updateField("rememberMe", e.target.checked)}
+                            />
+                            Remember me
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" className="btn-primary">Sign in</button>
 
 
                     </form>
