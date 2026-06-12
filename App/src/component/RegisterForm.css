@@ -1,0 +1,120 @@
+:root {
+  --brand:        #534AB7;
+  --brand-hover:  #3C3489;
+  --error:        #A32D2D;
+  --success:      #1D9E75;
+  --radius:       10px;
+  --radius-lg:    16px;
+}
+
+.login-card__accent {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #534AB7, #1D9E75);
+}
+
+.inline-link {
+  color: var(--brand);
+  text-decoration: none;
+  font-size: inherit;
+}
+.inline-link:hover { text-decoration: underline; }
+
+.register-signin {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin: 1rem 0 0;
+}
+.register-signin a,
+.link-btn {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}
+.register-signin a:hover,
+.link-btn:hover { text-decoration: underline; }
+
+.strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.strength__bars {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.strength__bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 99px;
+  background: #e0e0e0;
+  transition: background 0.2s;
+}
+
+.strength__bar--weak   { background: #e25c5c; }
+.strength__bar--fair   { background: #f0a742; }
+.strength__bar--good   { background: #5ba4f5; }
+.strength__bar--strong { background: var(--success); }
+
+.strength__label {
+  font-size: 11px;
+  font-weight: 600;
+  min-width: 44px;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.strength__label--weak   { color: #e25c5c; }
+.strength__label--fair   { color: #f0a742; }
+.strength__label--good   { color: #5ba4f5; }
+.strength__label--strong { color: var(--success); }
+
+.password-rules {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 4px 12px;
+}
+
+.password-rules__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.password-rules__item.passed {
+  color: var(--success);
+}
+
+.register-success {
+  text-align: center;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(29, 158, 117, 0.1);
+  color: var(--success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}

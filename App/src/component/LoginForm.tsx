@@ -3,6 +3,9 @@ import { Eye, EyeOff } from "lucide-react"
 import "./LoginForm.css"
 
 // Set type
+
+type Props = { onGoRegister?: () => void }
+
 type FormData = {
   username: string
   password: string
@@ -15,7 +18,7 @@ const INITIAL_FORM: FormData = {
   rememberMe: false,
 }
 
-export default function LoginForm() {
+export default function LoginForm({ onGoRegister }: Props) {
     const [formData, setFormData] = useState<FormData>(INITIAL_FORM);
 
     const [showPass, setShowPass] = useState(false);
@@ -96,6 +99,13 @@ export default function LoginForm() {
                         </div>
 
                         <button type="submit" className="btn-primary">Sign in</button>
+
+                        <p className="register-signin">
+                            Don't have an account?{" "}
+                            <button type="button" className="link-btn" onClick={onGoRegister}>
+                                Create an account
+                            </button>
+                        </p>
 
 
                     </form>
