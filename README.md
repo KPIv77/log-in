@@ -2,7 +2,7 @@
 
 This workspace contains a small React + TypeScript login UI built with Vite.
 
-## [DEMO](https://log-in-ten-red.vercel.app/t)
+## [DEMO](https://log-in-ten-red.vercel.app/)
 
 ## Project Overview
 
