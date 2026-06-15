@@ -1,5 +1,8 @@
 App/node_modules/
 
+*.pyc
+__pycache__/:w
+
 *.env
 venv/
 build/
